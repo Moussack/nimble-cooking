@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 
 // styles
@@ -12,6 +13,7 @@ export default function Create() {
    const [ingredients, setIngredients] = useState([]);
    const ingredientInput = useRef(null);
    const { data, isPending, error, postData } = useFetch('http://localhost:3000/recipes', 'POST');
+   const history = useHistory();
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -30,6 +32,13 @@ export default function Create() {
       setNewIngredient('');
       ingredientInput.current.focus();
    };
+
+   // redirect the user to the homepage
+   useEffect(() => {
+      if (data) {
+         history.push('/');
+      }
+   }, [data, history]);
 
    return (
       <div className="create">

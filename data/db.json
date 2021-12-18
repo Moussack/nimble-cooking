@@ -47,6 +47,29 @@
       "method": "masak dengan air matang secukupnya",
       "cookingTime": "60 minutes",
       "id": "u6BmrEP"
+    },
+    {
+      "title": "Fried Rice",
+      "ingredients": [
+        "Tofu",
+        "Eggs",
+        "Rice"
+      ],
+      "method": "blah blah blah",
+      "cookingTime": "25 minutes",
+      "id": "9i2qitE"
+    },
+    {
+      "title": "Chicken curry",
+      "ingredients": [
+        "chicken",
+        "turmeric",
+        "salt",
+        "chile"
+      ],
+      "method": "cook it",
+      "cookingTime": "12 minutes",
+      "id": "VjAnqIL"
     }
   ]
 }

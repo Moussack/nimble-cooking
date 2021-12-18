@@ -38,10 +38,11 @@ export const useFetch = (url, method = 'GET') => {
          }
       };
 
+      // invoke fetchData
       if (method === 'GET') {
          fetchData();
       }
-      if (method === 'POST') {
+      if (method === 'POST' && options) {
          fetchData(options);
       }
 

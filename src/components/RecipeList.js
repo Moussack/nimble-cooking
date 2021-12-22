@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 // styles
 import './RecipeList.css';
 
-export default function RecipeList({ recipes }) {
+export default function RecipeList({ recipes, query }) {
+   if (recipes.length === 0) {
+      return <div className="error">No recipe named "{query}" to Load...</div>;
+   }
+
    return (
       <div className="recipe-list">
          {recipes.map((recipe) => (
